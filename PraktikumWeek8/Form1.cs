@@ -57,13 +57,13 @@ namespace PraktikumWeek8
             {
                 DataTable dtTim = new DataTable();
                 ////mulai dari sini
-                sqlQuery = "select t.team_name as 'namaTim' , p.player_name , m.manager_name, t.home_stadium, t.capacity from team t, manager m, player p WHERE t.manager_id = m.manager_id and t.captain_id = p.player_id and team_name = '" + cBoxHome.SelectedValue + "'";
+                sqlQuery = "select t.team_name as 'namaTim' , p.player_name , m.manager_name, concat(t.home_stadium, ',', t.city), t.capacity from team t, manager m, player p WHERE t.manager_id = m.manager_id and t.captain_id = p.player_id and team_name = '" + cBoxHome.SelectedValue + "'";
                 sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
                 sqlAdapter = new MySqlDataAdapter(sqlCommand);
                 sqlAdapter.Fill(dtTim);
                 lblManagHomeIsi.Text = dtTim.Rows[0][2].ToString();
                 lblCaptHomeIsi.Text = dtTim.Rows[0][1].ToString();
-                lblStadiumIsi.Text = dtTim.Rows[0]["home_stadium"].ToString();
+                lblStadiumIsi.Text = dtTim.Rows[0][3].ToString();
                 lblCapacityIsi.Text = dtTim.Rows[0]["capacity"].ToString();
                 ////sampai sini
                 
