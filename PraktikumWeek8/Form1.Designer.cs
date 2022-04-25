@@ -43,6 +43,13 @@
             this.lblStadiumIsi = new System.Windows.Forms.Label();
             this.lblCapacity = new System.Windows.Forms.Label();
             this.lblStadium = new System.Windows.Forms.Label();
+            this.dgvMatch = new System.Windows.Forms.DataGridView();
+            this.btnCheck = new System.Windows.Forms.Button();
+            this.lblSkor = new System.Windows.Forms.Label();
+            this.lblTgl = new System.Windows.Forms.Label();
+            this.lblIsiSkor = new System.Windows.Forms.Label();
+            this.lblIsiTgl = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMatch)).BeginInit();
             this.SuspendLayout();
             // 
             // cBoxHome
@@ -78,76 +85,76 @@
             // lblManagHome
             // 
             this.lblManagHome.AutoSize = true;
-            this.lblManagHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManagHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManagHome.Location = new System.Drawing.Point(40, 109);
             this.lblManagHome.Name = "lblManagHome";
-            this.lblManagHome.Size = new System.Drawing.Size(101, 25);
+            this.lblManagHome.Size = new System.Drawing.Size(84, 20);
             this.lblManagHome.TabIndex = 3;
             this.lblManagHome.Text = "Manager :";
             // 
             // lblCaptHome
             // 
             this.lblCaptHome.AutoSize = true;
-            this.lblCaptHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCaptHome.Location = new System.Drawing.Point(40, 170);
+            this.lblCaptHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCaptHome.Location = new System.Drawing.Point(48, 154);
             this.lblCaptHome.Name = "lblCaptHome";
-            this.lblCaptHome.Size = new System.Drawing.Size(91, 25);
+            this.lblCaptHome.Size = new System.Drawing.Size(76, 20);
             this.lblCaptHome.TabIndex = 4;
             this.lblCaptHome.Text = "Captain :";
             // 
             // lblManagHomeIsi
             // 
             this.lblManagHomeIsi.AutoSize = true;
-            this.lblManagHomeIsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManagHomeIsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManagHomeIsi.Location = new System.Drawing.Point(177, 109);
             this.lblManagHomeIsi.Name = "lblManagHomeIsi";
-            this.lblManagHomeIsi.Size = new System.Drawing.Size(0, 25);
+            this.lblManagHomeIsi.Size = new System.Drawing.Size(0, 20);
             this.lblManagHomeIsi.TabIndex = 5;
             // 
             // lblCaptHomeIsi
             // 
             this.lblCaptHomeIsi.AutoSize = true;
-            this.lblCaptHomeIsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCaptHomeIsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCaptHomeIsi.Location = new System.Drawing.Point(177, 170);
             this.lblCaptHomeIsi.Name = "lblCaptHomeIsi";
-            this.lblCaptHomeIsi.Size = new System.Drawing.Size(0, 25);
+            this.lblCaptHomeIsi.Size = new System.Drawing.Size(0, 20);
             this.lblCaptHomeIsi.TabIndex = 6;
             // 
             // lblCaptLawanIsi
             // 
             this.lblCaptLawanIsi.AutoSize = true;
-            this.lblCaptLawanIsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCaptLawanIsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCaptLawanIsi.Location = new System.Drawing.Point(642, 170);
             this.lblCaptLawanIsi.Name = "lblCaptLawanIsi";
-            this.lblCaptLawanIsi.Size = new System.Drawing.Size(0, 25);
+            this.lblCaptLawanIsi.Size = new System.Drawing.Size(0, 20);
             this.lblCaptLawanIsi.TabIndex = 10;
             // 
             // lblManagLawanIsi
             // 
             this.lblManagLawanIsi.AutoSize = true;
-            this.lblManagLawanIsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManagLawanIsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManagLawanIsi.Location = new System.Drawing.Point(642, 109);
             this.lblManagLawanIsi.Name = "lblManagLawanIsi";
-            this.lblManagLawanIsi.Size = new System.Drawing.Size(0, 25);
+            this.lblManagLawanIsi.Size = new System.Drawing.Size(0, 20);
             this.lblManagLawanIsi.TabIndex = 9;
             // 
             // lblCaptLawan
             // 
             this.lblCaptLawan.AutoSize = true;
-            this.lblCaptLawan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCaptLawan.Location = new System.Drawing.Point(505, 170);
+            this.lblCaptLawan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCaptLawan.Location = new System.Drawing.Point(508, 154);
             this.lblCaptLawan.Name = "lblCaptLawan";
-            this.lblCaptLawan.Size = new System.Drawing.Size(96, 25);
+            this.lblCaptLawan.Size = new System.Drawing.Size(81, 20);
             this.lblCaptLawan.TabIndex = 8;
             this.lblCaptLawan.Text = "Captain : ";
             // 
             // lblManagLawan
             // 
             this.lblManagLawan.AutoSize = true;
-            this.lblManagLawan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManagLawan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManagLawan.Location = new System.Drawing.Point(505, 109);
             this.lblManagLawan.Name = "lblManagLawan";
-            this.lblManagLawan.Size = new System.Drawing.Size(101, 25);
+            this.lblManagLawan.Size = new System.Drawing.Size(84, 20);
             this.lblManagLawan.TabIndex = 7;
             this.lblManagLawan.Text = "Manager :";
             // 
@@ -155,7 +162,7 @@
             // 
             this.lblCapacityIsi.AutoSize = true;
             this.lblCapacityIsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCapacityIsi.Location = new System.Drawing.Point(408, 339);
+            this.lblCapacityIsi.Location = new System.Drawing.Point(393, 224);
             this.lblCapacityIsi.Name = "lblCapacityIsi";
             this.lblCapacityIsi.Size = new System.Drawing.Size(0, 25);
             this.lblCapacityIsi.TabIndex = 14;
@@ -163,37 +170,101 @@
             // lblStadiumIsi
             // 
             this.lblStadiumIsi.AutoSize = true;
-            this.lblStadiumIsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStadiumIsi.Location = new System.Drawing.Point(408, 278);
+            this.lblStadiumIsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStadiumIsi.Location = new System.Drawing.Point(394, 186);
             this.lblStadiumIsi.Name = "lblStadiumIsi";
-            this.lblStadiumIsi.Size = new System.Drawing.Size(0, 25);
+            this.lblStadiumIsi.Size = new System.Drawing.Size(0, 20);
             this.lblStadiumIsi.TabIndex = 13;
             // 
             // lblCapacity
             // 
             this.lblCapacity.AutoSize = true;
-            this.lblCapacity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCapacity.Location = new System.Drawing.Point(271, 339);
+            this.lblCapacity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCapacity.Location = new System.Drawing.Point(282, 224);
             this.lblCapacity.Name = "lblCapacity";
-            this.lblCapacity.Size = new System.Drawing.Size(100, 25);
+            this.lblCapacity.Size = new System.Drawing.Size(84, 20);
             this.lblCapacity.TabIndex = 12;
             this.lblCapacity.Text = "Capacity :";
             // 
             // lblStadium
             // 
             this.lblStadium.AutoSize = true;
-            this.lblStadium.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStadium.Location = new System.Drawing.Point(271, 278);
+            this.lblStadium.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStadium.Location = new System.Drawing.Point(286, 186);
             this.lblStadium.Name = "lblStadium";
-            this.lblStadium.Size = new System.Drawing.Size(95, 25);
+            this.lblStadium.Size = new System.Drawing.Size(80, 20);
             this.lblStadium.TabIndex = 11;
             this.lblStadium.Text = "Stadium :";
+            // 
+            // dgvMatch
+            // 
+            this.dgvMatch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMatch.Location = new System.Drawing.Point(12, 390);
+            this.dgvMatch.Name = "dgvMatch";
+            this.dgvMatch.RowHeadersWidth = 51;
+            this.dgvMatch.RowTemplate.Height = 24;
+            this.dgvMatch.Size = new System.Drawing.Size(776, 334);
+            this.dgvMatch.TabIndex = 15;
+            // 
+            // btnCheck
+            // 
+            this.btnCheck.Location = new System.Drawing.Point(315, 263);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(105, 33);
+            this.btnCheck.TabIndex = 16;
+            this.btnCheck.Text = "Check";
+            this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
+            // 
+            // lblSkor
+            // 
+            this.lblSkor.AutoSize = true;
+            this.lblSkor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSkor.Location = new System.Drawing.Point(311, 351);
+            this.lblSkor.Name = "lblSkor";
+            this.lblSkor.Size = new System.Drawing.Size(53, 20);
+            this.lblSkor.TabIndex = 18;
+            this.lblSkor.Text = "Skor :";
+            // 
+            // lblTgl
+            // 
+            this.lblTgl.AutoSize = true;
+            this.lblTgl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTgl.Location = new System.Drawing.Point(282, 311);
+            this.lblTgl.Name = "lblTgl";
+            this.lblTgl.Size = new System.Drawing.Size(78, 20);
+            this.lblTgl.TabIndex = 17;
+            this.lblTgl.Text = "Tanggal :";
+            // 
+            // lblIsiSkor
+            // 
+            this.lblIsiSkor.AutoSize = true;
+            this.lblIsiSkor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIsiSkor.Location = new System.Drawing.Point(391, 351);
+            this.lblIsiSkor.Name = "lblIsiSkor";
+            this.lblIsiSkor.Size = new System.Drawing.Size(0, 20);
+            this.lblIsiSkor.TabIndex = 20;
+            // 
+            // lblIsiTgl
+            // 
+            this.lblIsiTgl.AutoSize = true;
+            this.lblIsiTgl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIsiTgl.Location = new System.Drawing.Point(391, 311);
+            this.lblIsiTgl.Name = "lblIsiTgl";
+            this.lblIsiTgl.Size = new System.Drawing.Size(0, 20);
+            this.lblIsiTgl.TabIndex = 19;
             // 
             // FormHasilPertandingan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 736);
+            this.Controls.Add(this.lblIsiSkor);
+            this.Controls.Add(this.lblIsiTgl);
+            this.Controls.Add(this.lblSkor);
+            this.Controls.Add(this.lblTgl);
+            this.Controls.Add(this.btnCheck);
+            this.Controls.Add(this.dgvMatch);
             this.Controls.Add(this.lblCapacityIsi);
             this.Controls.Add(this.lblStadiumIsi);
             this.Controls.Add(this.lblCapacity);
@@ -212,6 +283,7 @@
             this.Name = "FormHasilPertandingan";
             this.Text = "Hasil Pertandingan";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMatch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,6 +306,12 @@
         private System.Windows.Forms.Label lblStadiumIsi;
         private System.Windows.Forms.Label lblCapacity;
         private System.Windows.Forms.Label lblStadium;
+        private System.Windows.Forms.DataGridView dgvMatch;
+        private System.Windows.Forms.Button btnCheck;
+        private System.Windows.Forms.Label lblSkor;
+        private System.Windows.Forms.Label lblTgl;
+        private System.Windows.Forms.Label lblIsiSkor;
+        private System.Windows.Forms.Label lblIsiTgl;
     }
 }
 
