@@ -101,21 +101,19 @@ namespace PraktikumWeek8
             try
             {
                 DataTable dMatch = new DataTable();
-                sqlQuery = "select date_format(match.match_date, '%e %M %Y'),concat(match.goal_home,' - ',match.goal_away)  from player p, dmatch d,team t, team t2, match where d.match_id = match.match_id and p.player_id = d.player_id and (((t.team_name = '" + cBoxHome.SelectedValue.ToString() + "'and t2.team_name = '" + cBoxLawan.SelectedValue.ToString() + "')or (t2.team_name = '" + cBoxHome.SelectedValue.ToString() + "' and t.team_name = '" + cBoxLawan.SelectedValue.ToString() + "')) and ((t.team_id = match.team_home and t2.team_id = match.team_away) or (t.team_id = match.team_away and t2.team_id = match.team_home) )); ";
+                sqlQuery = "select date_format(m.match_date, '%e %M %Y'),concat(m.goal_home,' - ',m.goal_away)  from player p, dmatch d,team t, team t2, `match` m where d.match_id = m.match_id and p.player_id = d.player_id and (((t.team_name = '" + cBoxHome.SelectedValue.ToString() + "'and t2.team_name = '" + cBoxLawan.SelectedValue.ToString() + "')or (t2.team_name = '" + cBoxHome.SelectedValue.ToString() + "' and t.team_name = '" + cBoxLawan.SelectedValue.ToString() + "')) and ((t.team_id = m.team_home and t2.team_id = m.team_away) or (t.team_id = m.team_away and t2.team_id = m.team_home) )); ";
                 sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
                 sqlAdapter = new MySqlDataAdapter(sqlCommand);
                 sqlAdapter.Fill(dMatch);
                 lblIsiTgl.Text = dMatch.Rows[0][0].ToString();
                 lblIsiSkor.Text = dMatch.Rows[0][1].ToString();
+                
                 DataTable dMatch2 = new DataTable();
-                sqlQuery = "select d.minute as 'minute', if(p.team_id = match.team_home,p.player_name,' ') as 'Player Name 1',if(p.team_id = match.team_home,if(d.type = 'CY' ,'Yellow Card',if(d.type = 'CR','Red Card',if(d.type = 'GO','Goal',if(d.type = 'GP','Goal Penalty',if(d.type = 'GW','Own Goal','Penalty Miss'))))),' ') as 'Type 1',if(p.team_id = match.team_away,p.player_name,' ') as 'Player Name 2',if(p.team_id = match.team_away,if(d.type = 'CY' ,'Yellow Card',if(d.type = 'CR','Red Card',if(d.type = 'GO','Goal',if(d.type = 'GP','Goal Penalty',if(d.type = 'GW','Own Goal','Penalty Miss'))))),' ') as 'Type 2' from player p, dmatch d,team t, team t2, match where d.match_id = match.match_id and p.player_id = d.player_id and (((t.team_name = '" + cBoxHome.SelectedValue.ToString() + "'and t2.team_name = '" + cBoxLawan.SelectedValue.ToString() + "')or (t2.team_name = '" + cBoxHome.SelectedValue.ToString() + "' and t.team_name = '" + cBoxLawan.SelectedValue.ToString() + "')) and ((t.team_id = match.team_home and t2.team_id = match.team_away) or (t.team_id = match.team_away and t2.team_id = match.team_home) )) group by 1 order by 1; ";
+                sqlQuery = "select d.minute, if(p.team_id = match.team_home,p.player_name,' ') as 'player 1',if(p.team_id = match.team_home,if(d.type = 'CY' ,'Yellow Card',if(d.type = 'CR','Red Card',if(d.type = 'GO','Goal',if(d.type = 'GP','Goal Penalty',if(d.type = 'GW','Own Goal','Penalty Miss'))))),' ') as 'Type 1',if(p.team_id = match.team_away,p.player_name,' ') as 'player 2',if(p.team_id = match.team_away,if(d.type = 'CY' ,'Yellow Card',if(d.type = 'CR','Red Card',if(d.type = 'GO','Goal',if(d.type = 'GP','Goal Penalty',if(d.type = 'GW','Own Goal','Penalty Miss'))))),' ') as 'Type 2' from player p, dmatch d,team t, team t2, `match` where d.match_id = match.match_id and p.player_id = d.player_id and (((t.team_name = '" + cBoxHome.SelectedValue.ToString() + "'and t2.team_name = '" + cBoxLawan.SelectedValue.ToString() + "')or (t2.team_name = '" + cBoxHome.SelectedValue.ToString() + "' and t.team_name = '" + cBoxLawan.SelectedValue.ToString() + "')) and ((t.team_id = match.team_home and t2.team_id = match.team_away) or (t.team_id = match.team_away and t2.team_id = match.team_home) )) group by 1 order by 1; ";
                 sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
                 sqlAdapter = new MySqlDataAdapter(sqlCommand);
                 sqlAdapter.Fill(dMatch2);
                 dgvMatch.DataSource = dMatch2;
-
-              
-
             }
             catch (Exception)
             {
